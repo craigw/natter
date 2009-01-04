@@ -1,12 +1,17 @@
 Chat Robot in Ruby
 ==================
 
-A framework for creating bots. At the moment it only works for fairly simple XMPP (Jabber) based bots because they're what I'm most interested in. I have plans to extend it to be able to communicate over AIM and e-mail too, but they're not quite as interesting to me so I may not ever do that work. If you're interested in those things, patches would be awesome! 
+A framework for creating bots. At the moment it only works for fairly simple
+XMPP (Jabber) based bots because they're what I'm most interested in. I have
+plans to extend it to be able to communicate over AIM and e-mail too, but
+they're not quite as interesting to me so I may not ever do that work. If
+you're interested in those things, patches would be awesome!
 
 Getting started
 ---------------
 
-You'll need an XMPP account. You can get one easily be signing up to Google Talk. You'll also need to have the dependencies installed.
+You'll need an XMPP account. You can get one easily be signing up to Google
+Talk. You'll also need to have the dependencies installed.
 
 require crib's init.rb and you're good to go.
 
