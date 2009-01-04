@@ -78,4 +78,5 @@ module Crib
   def bot(&block)
     Crib::Bot(&block)
   end
+  extend self
 end
