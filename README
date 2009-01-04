@@ -36,7 +36,8 @@ Dependencies
 ------------
 
 RubyGems (tested with >= 1.2.0, may work with earlier)
-Doodle >= 0.1.9
+doodle >= 0.1.9
+xmpp4r-simple >= 0.8.8
 
 Contributors
 ------------
