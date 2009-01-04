@@ -1,4 +1,4 @@
-module Crib
+module Natter
   class Contact
     include Doodle::Core
     has :status, :kind => Symbol, :default => :offline

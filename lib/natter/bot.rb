@@ -1,11 +1,11 @@
-module Crib
+module Natter
   class Bot
     include Doodle::Core
 
     has :username, :kind => String
     has :password, :kind => String
 
-    has :roster, :collect => { :contact => Crib::Contact }, :key => :jid
+    has :roster, :collect => { :contact => Natter::Contact }, :key => :jid
 
     def on(event, &block)
       callbacks[event] ||= []
@@ -21,14 +21,14 @@ module Crib
         loop do
           begin
             client.received_messages do |msg|
-              contact = Crib::Contact(:jid => msg.from.to_s.strip)
-              message = Crib::Message(:sender => contact, :body => msg.body)
+              contact = Natter::Contact(:jid => msg.from.to_s.strip)
+              message = Natter::Message(:sender => contact, :body => msg.body)
               send(:message_received, message)
             end
 
             client.presence_updates do |update|
               jid, status, status_message = *update
-              contact = Crib::Contact(
+              contact = Natter::Contact(
                 :jid => jid,
                 :status => status,
                 :status_message => status_message
@@ -81,7 +81,7 @@ module Crib
   end
 
   def bot(&block)
-    Crib::Bot(&block).run
+    Natter::Bot(&block).run
   end
   extend self
 end

@@ -1,1 +1,1 @@
-require File.dirname(__FILE__) + '/lib/crib'
+require File.dirname(__FILE__) + '/lib/natter'

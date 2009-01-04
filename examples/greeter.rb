@@ -1,5 +1,5 @@
 require File.dirname(__FILE__) + '/../init'
-include Crib
+include Natter
 
 bot do
   username "user@domain.com"

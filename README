@@ -1,9 +1,7 @@
-Chat Robot in Ruby
-==================
+Natter
+======
 
-A framework for creating bots. At the moment it only works for fairly simple
-XMPP (Jabber) based bots because they're what I'm most interested in. I have
-plans to extend it to be able to communicate over AIM and e-mail too, but
+A framework for creating chat-bots. At the moment it only works for fairly simple XMPP (Jabber) based bots because they're what I'm most interested in. I have plans to extend it to be able to communicate over AIM and e-mail too, but
 they're not quite as interesting to me so I may not ever do that work. If
 you're interested in those things, patches would be awesome!
 
@@ -13,19 +11,19 @@ Getting started
 You'll need an XMPP account. You can get one easily be signing up to Google
 Talk. You'll also need to have the dependencies installed.
 
-require crib's init.rb and you're good to go.
+require natter's init.rb and you're good to go.
 
-  # Use the path to wherever you've got Crib installed.
+  # Use the path to wherever you've got Natter installed.
   #
-  require '.../crib/init.rb'
+  require '.../natter/init.rb'
   
   # Define how the bot login in and reacts to stimuli.
   #
   # nb. This will take over the current thread. If you want to run it in the 
   # background of your application you'll need to wrap it in a new thread or
-  # use Crib::Bot.new do ... end (which doesn't start the bot).
+  # use Natter::Bot.new do ... end (which doesn't start the bot).
   #
-  bot = Crib.bot do
+  bot = Natter.bot do
     username "whatever@gtalk.com"
     password "password-here"
 
