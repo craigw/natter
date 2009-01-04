@@ -51,8 +51,11 @@ module Crib
     end
 
     def reply_to(message, text)
-      reply = message.reply(text)
-      @jabber.deliver(reply.recipient.jid, reply.body)
+      say_to(message.sender, text)
+    end
+
+    def say_to(contact, text)
+      @jabber.deliver(contact.jid, text)
     end
 
     private
