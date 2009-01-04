@@ -40,7 +40,7 @@ module Crib
           end
           sleep 0.1
         end
-      end.join
+      end
     end
 
     protected
@@ -81,7 +81,7 @@ module Crib
   end
 
   def bot(&block)
-    Crib::Bot(&block)
+    Crib::Bot(&block).run
   end
   extend self
 end

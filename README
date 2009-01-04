@@ -19,7 +19,11 @@ require crib's init.rb and you're good to go.
   #
   require '.../crib/init.rb'
   
-  # Define the bot
+  # Define how the bot login in and reacts to stimuli.
+  #
+  # nb. This will take over the current thread. If you want to run it in the 
+  # background of your application you'll need to wrap it in a new thread or
+  # use Crib::Bot.new do ... end (which doesn't start the bot).
   #
   bot = Crib.bot do
     username "whatever@gtalk.com"
@@ -30,12 +34,6 @@ require crib's init.rb and you're good to go.
     # ... see the examples directory for available callbacks ...
     #
   end
-
-  # Start the bot.
-  # nb. This will take over the current thread. If you want to run it in the 
-  # background of your application you'll need to wrap it in a new thread.
-  #
-  bot.run
 
 Dependencies
 ------------

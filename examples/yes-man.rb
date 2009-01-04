@@ -7,4 +7,4 @@ bot do
   on :message_received do |message|
     reply_to message, "I agree with you when you say ``#{message.body}''"
   end
-end.run
+end

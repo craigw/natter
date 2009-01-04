@@ -9,4 +9,4 @@ bot do
       say_to contact, "Hey, how's tricks?"
     end
   end
-end.run
+end

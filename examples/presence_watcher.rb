@@ -7,4 +7,4 @@ bot do
   on :presence_change do |contact|
     puts "[#{Time.now}] #{contact.jid} changed presence to #{contact.status}."
   end
-end.run
+end
