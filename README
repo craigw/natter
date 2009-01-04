@@ -1,0 +1,15 @@
+Chat Robot in Ruby
+==================
+
+A framework for creating bots.
+
+Dependencies
+------------
+
+RubyGems (tested with >= 1.2.0, may work with earlier)
+Doodle >= 0.1.9
+
+Contributors
+------------
+
+Craig R Webster <http://barkingiguana.com/~craig>
