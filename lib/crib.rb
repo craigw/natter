@@ -6,9 +6,9 @@ end
 
 require 'rubygems'
 require 'doodle'
-require 'crib/bot'
 require 'crib/contact'
 require 'crib/message'
+require 'crib/bot'
 require '/usr/local/lib/ruby/gems/1.8/gems/xmpp4r-simple-0.8.8/lib/xmpp4r-simple'
 
 if !"".respond_to?(:classify)

@@ -5,6 +5,8 @@ module Crib
     has :username, :kind => String
     has :password, :kind => String
 
+    has :roster, :collect => { :contact => Crib::Contact }, :key => :jid
+
     def on(event, &block)
       callbacks[event] ||= []
       callbacks[event] << block
@@ -16,7 +18,7 @@ module Crib
       @jabber.deliver("craig@xeriom.net", "I woke up at #{Time.now}.")
 
       Thread.new(@jabber) do |client|
-        loop do # Presence
+        loop do
           begin
             client.received_messages do |msg|
               contact = Crib::Contact(:jid => msg.from.to_s.strip)
@@ -43,7 +45,10 @@ module Crib
 
     protected
     def presence_change(contact)
-      call_callbacks_for(:presence_change, contact)
+      roster[contact.jid] ||= contact
+      roster[contact.jid].previous_status = @roster[contact.jid].status
+      roster[contact.jid].status = contact.status
+      call_callbacks_for(:presence_change, roster[contact.jid])
     end
 
     def message_received(message)
