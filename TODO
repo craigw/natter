@@ -3,6 +3,7 @@
   * Facebook chat implementation [Declan]
 
 * Persistent roster support
+  * For "last seen" and "last status"
 
 * More callbacks
   * on :subscription_request
