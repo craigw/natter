@@ -1,5 +1,6 @@
 * Communication channel interface
   * XMPP implementation
+  * AIM implementation
   * Facebook chat implementation [Declan]
 
 * Persistent roster support

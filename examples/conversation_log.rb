@@ -21,7 +21,9 @@ class TextFileConversationLog
 end
 
 bot do
-  username "user@domain.com"
-  password "..."
+  channel do
+    username "user@domain.com"
+    password "..."
+  end
   history_store TextFileConversationLog(:directory => ".")
 end

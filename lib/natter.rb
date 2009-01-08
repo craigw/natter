@@ -7,10 +7,12 @@ end
 require 'rubygems'
 require 'doodle'
 require 'xmpp4r-simple'
+require 'natter/callback'
 require 'natter/contact'
 require 'natter/message'
-require 'natter/callback'
+require 'natter/roster'
 require 'natter/bot'
+require 'natter/channel/xmpp_channel'
 
 if !"".respond_to?(:classify)
   class String

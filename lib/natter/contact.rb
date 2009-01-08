@@ -7,6 +7,9 @@ module Natter
     has :status_message, :kind => String, :default => "" do
       from NilClass do; ""; end
     end
+    has :channels, :collect => :channel
+    
+    alias_method :id, :jid
 
     def online?
       [ :online ].include? status
