@@ -6,10 +6,10 @@ end
 
 require 'rubygems'
 require 'doodle'
+require 'xmpp4r-simple'
 require 'natter/contact'
 require 'natter/message'
 require 'natter/bot'
-require '/usr/local/lib/ruby/gems/1.8/gems/xmpp4r-simple-0.8.8/lib/xmpp4r-simple'
 
 if !"".respond_to?(:classify)
   class String
