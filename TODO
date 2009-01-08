@@ -1,0 +1,10 @@
+* Communication channel interface
+  * XMPP implementation
+  * Facebook chat implementation [Declan]
+
+* Persistent roster support
+
+* More callbacks
+  * on :subscription_request
+
+* Documentation!
