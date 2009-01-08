@@ -9,6 +9,7 @@ require 'doodle'
 require 'xmpp4r-simple'
 require 'natter/contact'
 require 'natter/message'
+require 'natter/callback'
 require 'natter/bot'
 
 if !"".respond_to?(:classify)
