@@ -8,7 +8,6 @@ module Natter
     def update(contact)
       self[contact.id].status = contact.status
       self[contact.id].status_message = contact.status_message
-      self[contact.id].channels |= contact.channels
     end
   end
 end
