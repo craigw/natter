@@ -3,6 +3,9 @@
   * AIM implementation
   * Facebook chat implementation [Declan]
 
+* Groupchat [John]
+  * Not sure if this is a communication channel, or even part of this library.
+
 * Persistent roster support
   * For "last seen" and "last status"
 
