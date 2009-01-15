@@ -27,7 +27,9 @@ module Natter
     end
 
     def say_to(contact, text)
-      roster[contact.id].deliver(contact, text)
+      channels.detect do |channel|
+        channel.deliver(contact, text)
+      end
     end
   end
 

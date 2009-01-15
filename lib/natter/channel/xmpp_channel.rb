@@ -22,7 +22,6 @@ module Natter
             begin
               client.received_messages do |msg|
                 contact = Natter::Contact(:jid => msg.from.to_s.strip.split(/\//, 2)[0])
-                contact.channel self
                 message = Natter::Message(:sender => contact, :body => msg.body)
                 controller.send(:message_received, message)
               end
@@ -34,7 +33,6 @@ module Natter
                   :status => status,
                   :status_message => status_message
                 )
-                contact.channel self
                 controller.send(:presence_change, contact)
               end
             rescue => bang
